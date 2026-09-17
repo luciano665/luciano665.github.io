@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{ $home := hugo.Data.home }}
+<section class="profile-layout">
+  <aside class="identity-rail" aria-label="Profile details">
+    <div class="profile-mark" aria-hidden="true">LM</div>
+    <div class="identity-details">
+      <p><span>Based in</span>Morgantown, WV</p>
+      <p><span>From</span>Bolivia</p>
+    </div>
+    <a class="cv-link" href="{{ "files/Luciano-Maldonado-CV.pdf" | relURL }}">CV <span aria-hidden="true">↗</span></a>
+    {{ partial "social_icons.html" (dict "align" "left") }}
+    <div class="interest-index">
+      <div>
+        <h2>Research interests</h2>
+        <ul>
+          {{ range $home.researchAreas }}<li><a href="{{ printf "tags/%s/" .slug | relURL }}">{{ .name }}</a></li>{{ end }}
+        </ul>
+      </div>
+      <div>
+        <h2>Technical interests</h2>
+        <ul>
+          {{ range $home.technicalAreas }}<li><a href="{{ printf "tags/%s/" .slug | relURL }}">{{ .name }}</a></li>{{ end }}
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <div class="profile-main">
+    <h1>{{ $home.name }}</h1>
+    <a class="profile-email" href="mailto:lumr0067@gmail.com">{{ $home.email }}</a>
+    <div class="profile-bio">
+      <p>{{ $home.bio }}</p>
+      <p>{{ $home.interests | markdownify }}</p>
+      <p>{{ $home.current }}</p>
+    </div>
+    <nav class="profile-nav" aria-label="Explore the website">
+      <a href="{{ "publications/" | relURL }}">Research</a>
+      <a href="{{ "projects/" | relURL }}">Projects</a>
+      <a href="{{ "career/" | relURL }}">Career</a>
+      <a href="{{ "blog/" | relURL }}">Blog</a>
+      <a href="{{ "archive/" | relURL }}">Archive</a>
+      <a href="{{ "search/" | relURL }}" aria-label="Search">⌕</a>
+    </nav>
+    <div class="home-content">
+      <section class="home-updates">
+        <h2>Updates</h2>
+        <div>
+          {{ range $home.updates }}<p><time>{{ .date }}</time><span>{{ .text }}</span></p>{{ end }}
+        </div>
+      </section>
+
+      <section class="home-featured">
+        <div class="compact-heading"><h2>Featured research</h2><a href="{{ "publications/" | relURL }}">See all</a></div>
+        <div class="featured-stack">
+          {{ range first 3 (where (where site.RegularPages "Section" "publications") "Params.featured" true) }}{{ partial "work-card.html" . }}{{ end }}
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+{{ end }}
