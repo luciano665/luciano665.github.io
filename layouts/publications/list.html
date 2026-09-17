@@ -1,0 +1,4 @@
+{{ define "main" }}
+<header class="collection-header"><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header>
+<div class="featured-stack collection-stack">{{ range .Pages.ByWeight }}{{ partial "work-card.html" . }}{{ end }}</div>
+{{ end }}
