@@ -1,0 +1,11 @@
+{{- $url := .RelPermalink -}}
+{{- if .Params.externalUrl }}{{ $url = .Params.externalUrl }}{{ end -}}
+<article class="work-card">
+  <h3><a href="{{ $url }}" {{ if .Params.externalUrl }}target="_blank" rel="noopener"{{ end }}>{{ .Title }}{{ if .Params.externalUrl }} <span aria-hidden="true">↗</span>{{ end }}</a></h3>
+  <p>{{ .Params.summary | default .Summary }}</p>
+  <div class="work-meta">
+    <span>{{ .Date.Format "January 2006" }}</span>
+    {{ with .Params.status }}<span>{{ . }}</span>{{ end }}
+    {{ with .Params.role }}<span>{{ . }}</span>{{ end }}
+  </div>
+</article>
