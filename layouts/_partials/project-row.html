@@ -1,0 +1,5 @@
+{{- $url := .RelPermalink -}}{{- if .Params.externalUrl }}{{ $url = .Params.externalUrl }}{{ end -}}
+<article class="project-row">
+  <div><h2><a href="{{ $url }}" {{ if .Params.externalUrl }}target="_blank" rel="noopener"{{ end }}>{{ .Title }}{{ if .Params.externalUrl }} <span aria-hidden="true">↗</span>{{ end }}</a></h2><p>{{ .Params.summary }}</p></div>
+  {{ with .Params.tech }}<p class="project-tech">{{ delimit . " · " }}</p>{{ end }}
+</article>
