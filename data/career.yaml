@@ -1,0 +1,12 @@
+experience:
+  - {period: "2026–present", role: "Student Researcher", organization: "Data Driven WV", text: "Built a Python and pandas pipeline unifying more than 1.4 million records, with deduplication, geospatial validation, and reproducible quality checks."}
+  - {period: "2025–present", role: "AI Researcher", organization: "Algoverse", text: "Lead research on multi-turn privacy leakage and contribute to multi-agent retrieval, grounded multi-hop answering, and trajectory tracking."}
+  - {period: "2025–present", role: "Undergraduate Researcher", organization: "Machine Intelligence Lab · WVU", text: "Research on language-model sycophancy, uncertainty, and medical vision-language models with Dr. Gyawali. Recipient of UR2PhD summer research support for the VLM project."}
+  - {period: "2024–2025", role: "Undergraduate Research Assistant", organization: "WVU", text: "Developed ECG-based cryptographic key-generation models with Dr. Tehranipoor and Dr. Karimian, including SURE research and IEEE-published work."}
+  - {period: "2024–2025", role: "Software Engineering Resident", organization: "Headstarter", text: "Built machine-learning and full-stack applications across model development, evaluation, and cloud deployment."}
+  - {period: "Summer 2024", role: "Software Engineering Intern", organization: "Alpha Systems · La Paz, Bolivia", text: "Developed Spring Boot services, automated reports, and a Python scheduling tool."}
+education:
+  institution: West Virginia University
+  degree: B.S. in Computer Science · Minor in Applied Mathematics
+  graduation: Expected May 2027
+  gpa: GPA 3.7 · Major GPA 4.0
