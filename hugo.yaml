@@ -1,0 +1,49 @@
+baseURL: https://luciano665.github.io/
+locale: en-US
+title: Luciano Maldonado
+theme: PaperMod
+publishDir: dist
+cleanDestinationDir: true
+enableRobotsTXT: true
+buildDrafts: false
+pagination:
+  pagerSize: 12
+outputs:
+  home: [HTML, RSS, JSON]
+minify:
+  disableXML: true
+  minifyOutput: true
+params:
+  env: production
+  description: AI research, publications, projects, and experience from Luciano Maldonado.
+  author: Luciano Maldonado
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowShareButtons: false
+  mainSections: [publications, projects]
+  assets:
+    favicon: /favicon.svg
+  label:
+    text: Luciano Maldonado
+  socialIcons:
+    - {name: email, url: "mailto:lumr0067@gmail.com"}
+    - {name: github, url: "https://github.com/luciano665"}
+    - {name: linkedin, url: "https://www.linkedin.com/in/luciano-maldonado-2129a520b/"}
+menu:
+  main:
+    - {identifier: publications, name: Research, url: /publications/, weight: 10}
+    - {identifier: projects, name: Projects, url: /projects/, weight: 20}
+    - {identifier: career, name: Career, url: /career/, weight: 30}
+    - {identifier: blog, name: Blog, url: /blog/, weight: 40}
+    - {identifier: archive, name: Archive, url: /archive/, weight: 50}
+    - {identifier: search, name: Search, url: /search/, weight: 60}
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
