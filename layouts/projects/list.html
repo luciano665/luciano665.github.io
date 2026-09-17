@@ -1,0 +1,4 @@
+{{ define "main" }}
+<header class="collection-header"><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header>
+<div class="project-list">{{ range .Pages.ByWeight }}{{ partial "project-row.html" . }}{{ end }}</div>
+{{ end }}
