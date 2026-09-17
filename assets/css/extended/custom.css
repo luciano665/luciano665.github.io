@@ -31,6 +31,7 @@ a { text-underline-offset: 4px; }
 .header { border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--theme) 93%, transparent); backdrop-filter: blur(12px); }
 .header-nav { max-width: var(--nav-width); }
 .logo a { font-weight: 650; }
+.nav-right { display: flex; align-items: center; column-gap: var(--gap); flex-wrap: wrap; }
 .menu a { font-size: .92rem; }
 .menu .active { color: var(--accent); font-weight: 600; }
 .main { padding-inline: 24px; }
