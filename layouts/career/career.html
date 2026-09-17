@@ -1,0 +1,9 @@
+{{ define "main" }}
+<header class="collection-header"><span class="section-kicker">Path so far</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header>
+<section class="timeline" aria-label="Experience">
+  {{ range hugo.Data.career.experience }}
+  <article><time>{{ .period }}</time><div><h2>{{ .role }}</h2><p class="organization">{{ .organization }}</p><p>{{ .text }}</p></div></article>
+  {{ end }}
+</section>
+<section class="education-card"><span class="section-kicker">Education</span><h2>{{ hugo.Data.career.education.institution }}</h2><p>{{ hugo.Data.career.education.degree }}</p><p>{{ hugo.Data.career.education.graduation }} · {{ hugo.Data.career.education.gpa }}</p><a href="{{ "files/Luciano-Maldonado-CV.pdf" | relURL }}">View full CV (PDF) →</a></section>
+{{ end }}
