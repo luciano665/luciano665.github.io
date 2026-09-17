@@ -1,0 +1,20 @@
+name: Luciano Maldonado
+email: lumr0067 [at] gmail [dot] com
+bio: I’m a computer science undergraduate at West Virginia University, with a minor in Applied Mathematics. I conduct research in the Machine Intelligence Lab with Dr. Gyawali and through Algoverse. My medical vision-language model research is supported by the UR2PhD program.
+interests: I’m broadly interested in **multimodal learning, interpretability, and intelligent agents**—how models represent information, reason across modalities, and act. I’m also interested in reinforcement learning, robotics, world models, and the systems used to train and evaluate AI.
+current: Currently, I study sycophancy in language and medical vision-language models, privacy leakage in multi-turn conversations, and methods for evaluating AI systems.
+researchAreas:
+  - {name: Machine Learning, slug: machine-learning}
+  - {name: Natural Language Processing, slug: natural-language-processing}
+  - {name: Multimodal AI, slug: multimodal-ai}
+  - {name: Mechanistic Interpretability, slug: mechanistic-interpretability}
+  - {name: Trustworthy AI, slug: trustworthy-ai}
+  - {name: Agentic AI, slug: agentic-ai}
+technicalAreas:
+  - {name: AI Systems, slug: ai-systems}
+  - {name: ML Infrastructure, slug: ml-infrastructure}
+  - {name: Software Engineering, slug: software-engineering}
+updates:
+  - {date: "2026", text: "Studying spatial sycophancy and internal representations in medical vision-language models."}
+  - {date: "2026", text: "Leading PrivDrift, a benchmark for active-context privacy leakage in LLM conversations."}
+  - {date: "2025", text: "Published ECG-based cryptographic key-generation work with IEEE."}
